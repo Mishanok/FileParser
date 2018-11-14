@@ -1,0 +1,24 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+
+<!DOCTYPE HTML>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+</head>
+<body>
+    <form enctype="multipart/form-data"  method="POST" class="regest_f">
+        <!--? вместо .html формат C sharp ?-->
+        <input type='text' maxlength='255' name='title' requered><br>
+        <input type='hidden' name='user_login' value='Здесь будет php'>
+        <input type='hidden' name='user_id' value='Здесь будет php'>
+        <input type='hidden' name='date' value='Здесь будет php'>
+        <textarea rows="10" cols="45" name="text"></textarea><br>
+        Вставьте файл формата pdf, doc, fb2, txt.<input name='file' type='file'><br>
+        <input type="submit" id="but" name="send_txt_vps" value="Отправить">
+    </form>
+    @ViewBag.Message
+</body>
+</html>
