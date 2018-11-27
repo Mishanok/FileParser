@@ -16,7 +16,6 @@ D:\App\Applications\WebParserCore\WebParserCore\obj\Debug\netcoreapp2.1\Razor\Vi
 D:\App\Applications\WebParserCore\WebParserCore\obj\Debug\netcoreapp2.1\Razor\Views\Home\Privacy.g.cshtml.cs
 D:\App\Applications\WebParserCore\WebParserCore\obj\Debug\netcoreapp2.1\Razor\Views\Shared\Error.g.cshtml.cs
 D:\App\Applications\WebParserCore\WebParserCore\obj\Debug\netcoreapp2.1\Razor\Views\Shared\_CookieConsentPartial.g.cshtml.cs
-D:\App\Applications\WebParserCore\WebParserCore\obj\Debug\netcoreapp2.1\Razor\Views\Shared\_Layout.g.cshtml.cs
 D:\App\Applications\WebParserCore\WebParserCore\obj\Debug\netcoreapp2.1\Razor\Views\Shared\_ValidationScriptsPartial.g.cshtml.cs
 D:\App\Applications\WebParserCore\WebParserCore\obj\Debug\netcoreapp2.1\Razor\Views\_ViewImports.g.cshtml.cs
 D:\App\Applications\WebParserCore\WebParserCore\obj\Debug\netcoreapp2.1\Razor\Views\_ViewStart.g.cshtml.cs
@@ -30,3 +29,4 @@ D:\App\Applications\WebParserCore\WebParserCore\obj\Debug\netcoreapp2.1\WebParse
 D:\App\Applications\WebParserCore\WebParserCore\obj\Debug\netcoreapp2.1\WebParserCore.pdb
 D:\App\Applications\WebParserCore\WebParserCore\obj\Debug\netcoreapp2.1\WebParserCore.csproj.CopyComplete
 D:\App\Applications\WebParserCore\WebParserCore\obj\Debug\netcoreapp2.1\Razor\Views\Home\Index.g.cshtml.cs
+D:\App\Applications\WebParserCore\WebParserCore\obj\Debug\netcoreapp2.1\Razor\Views\Shared\_Layout.g.cshtml.cs

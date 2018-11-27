@@ -1,7 +1,6 @@
 ﻿using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
-using System.Reflection;
 using WebParserCore.Models;
 
 namespace WebParserCore.Controllers
@@ -13,7 +12,7 @@ namespace WebParserCore.Controllers
         FileWorker fWorker;
         IHostingEnvironment environment;
         public static string mainPath;
-        public static IFormFile File;
+        public new static IFormFile File;
         public static string Message;
 
         public HomeController(IHostingEnvironment appEnvironment)
@@ -26,6 +25,7 @@ namespace WebParserCore.Controllers
         [HttpGet]
         public IActionResult Index()
         {
+            Message = "";
             return View();
         }
 
@@ -42,10 +42,11 @@ namespace WebParserCore.Controllers
                 fWorker = new FileWorker(File, resp);
                 if (await fWorker.WorkFileAsync() == true)
                 {
-                    if (Sender.Send(resp).Result == true)
+                    if (Sender.Send(resp, Initializer.forf).Result == true)
                     {
-                        ViewBag.Message = "OK!";
-                        return View();
+                        Message = "OK!";
+                        ViewBag.Message = Message;
+                        return Redirect("http://mail.teoset.com:8080/");
                     }
                     else {ViewBag.Message = Message; return View(); }
                 }
@@ -56,11 +57,17 @@ namespace WebParserCore.Controllers
             {
                 tWorker = new TetxWorker(resp);
                 tWorker.WorkText();
-                if (Sender.Send(resp).Result == true) { ViewBag.Message = "OK!"; return View(); }
+                if (Sender.Send(resp, Initializer.forf).Result == true) {Message = "OK!"; ViewBag.Message = Message; return Redirect("http://mail.teoset.com:8080/"); }
                 else { ViewBag.Message = Message; return View(); }
             }
             else
             { ViewBag.Message = Message; return View(); }
+        }
+
+        [Route("Home/Error/404")]
+        public IActionResult Error404()
+        {
+            return Redirect("mail.teoset.com:8080");
         }
     }
 }

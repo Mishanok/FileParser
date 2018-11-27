@@ -25,7 +25,7 @@ namespace WebParserCore
             if(!DateTime.TryParse(dat, out Date)) Date = DateTime.Now;
             text = txt;
             File = ifile;
-            if(text == null && ifile == null) { HomeController.Message = "Помилка! \n\r Не введено жодне значення!"; return false; }
+            if(string.IsNullOrEmpty(text) && ifile == null) { HomeController.Message = "Помилка! \n\r Не введено жодне значення!"; return false; }
             if (!IsTwoFieldFilled(out forf)) {HomeController.Message = "Помилка! \n\r Не можна вводити текст і надсилати файл одночасно!"; return false; }
             else
             {
